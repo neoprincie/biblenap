@@ -7,9 +7,15 @@ import Copyright from './Copyright';
 import { AppBar, Divider, FormControl, InputLabel, MenuItem, Select, Toolbar, Typography } from '@mui/material';
 import Grid from '@mui/material/Grid2';
 
+import { getChapter } from '~/data';
+import { Outlet } from '@remix-run/react';
+
 export default function Layout({ children }: { children: React.ReactNode }) {
   const [book, setBook] = useState("Genesis");
   const [chapter, setChapter] = useState(1);
+  
+
+  console.log(getChapter("Genesis", "1"));
 
   return (
     <Container maxWidth="lg">
@@ -66,7 +72,9 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             </FormControl>
           </Grid>
           <Grid size={8}>
-          <Typography variant="h5">The First Book of Moses, called Genesis</Typography>
+            {children}
+            {/* <Outlet /> */}
+          {/* <Typography variant="h5">The First Book of Moses, called Genesis</Typography>
 
           <Typography variant="h6">Chapter 1</Typography>
 
@@ -76,7 +84,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
 
           <Typography variant="body1"><sup>3</sup> And God said, Let there be light: and there was light.</Typography>
           
-          <Typography variant="body1"><sup>4</sup> And God saw the light, that <i>it was</i> good: and God divided the light from the darkness.</Typography>
+          <Typography variant="body1"><sup>4</sup> And God saw the light, that <i>it was</i> good: and God divided the light from the darkness.</Typography> */}
           </Grid>
           <Grid size={4}>
           <Typography variant="subtitle1">THE CREATION OF HEAVEN AND EARTH. (Gen 1:1-2)</Typography>
