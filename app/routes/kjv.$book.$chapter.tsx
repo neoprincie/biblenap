@@ -1,4 +1,4 @@
-import { Box, Paper, Typography } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import { useLoaderData } from "@remix-run/react";
 import { LoaderFunctionArgs, json } from "@remix-run/server-runtime";
 import { getChapter } from "~/data";
@@ -21,12 +21,6 @@ export const loader = async ({
   
     return (
         <Box>
-            {/* <Typography variant="h5">The First Book of Moses, called Genesis</Typography>
-
-            <Typography variant="h6">Chapter 1</Typography>
-
-            <Typography variant="body1"><sup>1</sup> In the beginning God created the heaven and the earth.</Typography> */}
-
             {verses.length ? (
                 <div>
                 {verses.map((verse) => (
@@ -36,9 +30,9 @@ export const loader = async ({
                 ))}
                 </div>
             ) : (
-              <p>
+                <p>
                 <i>No data</i>
-              </p>
+                </p>
             )}
         </Box>
     );
