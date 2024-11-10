@@ -6,7 +6,8 @@
     "build": "remix build",
     "dev": "remix dev --manual",
     "start": "remix-serve ./build/index.js",
-    "typecheck": "tsc"
+    "typecheck": "tsc",
+    "test": "vitest"
   },
   "dependencies": {
     "@emotion/cache": "latest",
@@ -25,9 +26,16 @@
   },
   "devDependencies": {
     "@remix-run/dev": "latest",
+    "@remix-run/testing": "^2.14.0",
+    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/react": "^16.0.1",
+    "@testing-library/user-event": "^14.5.2",
     "@types/react": "latest",
     "@types/react-dom": "latest",
-    "typescript": "latest"
+    "@vitejs/plugin-react": "^4.3.3",
+    "jsdom": "^25.0.1",
+    "typescript": "latest",
+    "vitest": "^2.1.4"
   },
   "engines": {
     "node": ">=14.0.0"

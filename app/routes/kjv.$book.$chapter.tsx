@@ -16,7 +16,7 @@ export const loader = async ({
     return json({ verses });
   };
 
-  export default function Contact() {
+  export default function Kjv() {
     const { verses } = useLoaderData<typeof loader>();
   
     return (
